@@ -1,0 +1,10 @@
+# Write your MySQL query statement below
+​
+DELETE FROM PERSON
+WHERE ID NOT IN(
+SELECT ID FROM(
+SELECT
+    EMAIL, MIN(ID) AS ID
+FROM
+    PERSON
+GROUP BY 1) AS A)
