@@ -1,0 +1,15 @@
+# Write your MySQL query statement below
+SELECT
+    FOLLOWEE AS FOLLOWER, COUNT(DISTINCT FOLLOWER) AS num
+FROM
+    FOLLOW
+WHERE
+    FOLLOWEE IN (
+        SELECT DISTINCT
+            FOLLOWER
+        FROM 
+            FOLLOW
+    )
+AND FOLLOWER != FOLLOWEE
+GROUP BY 1
+ORDER BY 1
