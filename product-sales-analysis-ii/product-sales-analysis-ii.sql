@@ -1,0 +1,6 @@
+# Write your MySQL query statement below
+SELECT
+    PRODUCT_ID, SUM(QUANTITY) AS TOTAL_QUANTITY
+FROM
+    SALES
+GROUP BY 1
