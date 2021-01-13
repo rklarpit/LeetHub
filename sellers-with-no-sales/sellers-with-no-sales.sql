@@ -1,0 +1,13 @@
+# Write your MySQL query statement below
+SELECT
+    S.SELLER_NAME
+FROM 
+    SELLER S
+LEFT JOIN
+    ORDERS O
+ON
+    S.SELLER_ID = O.SELLER_ID
+    AND YEAR(O.SALE_DATE) = 2020
+WHERE
+    O.ORDER_COST IS NULL
+ORDER BY 1
