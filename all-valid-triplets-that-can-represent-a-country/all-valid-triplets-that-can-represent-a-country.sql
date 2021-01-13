@@ -1,0 +1,21 @@
+# Write your MySQL query statement below
+SELECT
+    A.student_name  AS MEMBER_A, B.student_name as MEMBER_B, C.student_name as MEMBER_C
+FROM
+    SCHOOLA A
+INNER JOIN
+    SCHOOLB B
+ON
+    A.STUDENT_NAME != B.STUDENT_NAME
+AND
+    A.STUDENT_ID != B.STUDENT_ID
+INNER JOIN
+    SCHOOLC C
+ON
+    A.STUDENT_NAME != C.STUDENT_NAME
+AND
+    A.STUDENT_ID != C.STUDENT_ID
+AND
+    B.STUDENT_NAME != C.STUDENT_NAME
+AND
+    B.STUDENT_ID != C.STUDENT_ID
