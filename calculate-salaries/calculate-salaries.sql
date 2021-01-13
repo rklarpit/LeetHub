@@ -1,0 +1,24 @@
+# Write your MySQL query statement below
+WITH MAX_SAL AS(
+    SELECT 
+        COMPANY_ID, 
+        MAX(SALARY) AS MAX_SALARY
+    FROM
+        SALARIES
+    GROUP BY 1
+)
+SELECT
+    S.COMPANY_ID,
+    S.EMPLOYEE_ID,
+    S.EMPLOYEE_NAME,
+    ROUND(CASE 
+        WHEN M.MAX_SALARY < 1000 THEN S.SALARY
+        WHEN M.MAX_SALARY > 10000 THEN S.SALARY * 0.51
+        ELSE S.SALARY * 0.76
+    END,0) AS SALARY
+FROM
+    SALARIES    S
+INNER   JOIN
+    MAX_SAL     M
+ON
+    S.COMPANY_ID = M.COMPANY_ID
