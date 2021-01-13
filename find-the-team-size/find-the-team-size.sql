@@ -1,0 +1,17 @@
+# Write your MySQL query statement below
+WITH TEAM as (
+    SELECT 
+        TEAM_ID,
+        COUNT(EMPLOYEE_ID) AS TEAM_SIZE
+    FROM
+        EMPLOYEE
+    GROUP BY 1
+)
+SELECT
+    E.EMPLOYEE_ID,
+    T.TEAM_SIZE
+FROM
+    EMPLOYEE E
+INNER JOIN
+    TEAM T
+ON E.TEAM_ID = T.TEAM_ID
