@@ -1,3 +1,4 @@
+[Discussion Post (created on 15/0/2021 at 0:12)](https://leetcode.com/problems/triangle-judgement/discuss/1017517/Simple-Mysql-with-IF)  
 <h2>610. Triangle Judgement</h2><h3>Easy</h3><hr><div class="sql-schema-wrapper__3VBi"><a class="sql-schema-link__3cEg">SQL Schema<svg viewBox="0 0 24 24" width="1em" height="1em" class="icon__3Su4"><path fill-rule="evenodd" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a></div><div>A pupil Tim gets homework to identify whether three line segments could possibly form a triangle.
 <p>&nbsp;</p>
 However, this assignment is very heavy because there are hundreds of records to calculate.
